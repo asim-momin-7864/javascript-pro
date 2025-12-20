@@ -62,6 +62,57 @@ console.log(couter++);
 
 
 
+//* Comparison Operators
 
 
+// comparing same data type have no issues , it is simple
+
+console.log(2 > 1);
+console.log(2 >= 1);
+console.log(2 < 1);
+console.log(2 <= 1);
+console.log(2 == 1);
+console.log(2 != 1);
+
+
+
+//* comapring between different datatypes
+//! This may not give you your desire output
+
+console.log("2" > 1); // => true (2 is converted into number)
+console.log("02" > 1);
+
+
+//* Comparison with null with zero (bcz mostly we assume null means nothing so probablly zero)
+
+//! Very Unpredictable Behaviour / outputs 
+console.log(null > 0); // => false //! So it say Null is not greater than Zero
+console.log(null == 0); // => false //! So here it say Null is not equal to Zero
+
+// Then we probaby think , Null smaller than zero , Like in -ve
+console.log(null >= 0); // => true //! But, Here it says Null is greater than and equal to Zero 
+
+
+//? Why this happens ? 
+// Because it is not about value, it is about what rules (ECMA) it use while conversion, Thats why it becomes unpredicatable
+
+// Also In js, The reason is that an equality check == and comparisons >, <, <=, >= work differently (use different algorithms)
+// Comaprison operator converts null to a number, treating it as 0.
+
+// That's why  
+// 1st Operation (null > 0) is false
+// and 3rd operation (null >= 0) is  true
+ 
+
+
+//* Comparison with undefined
+console.log(undefined == 0); // => false
+console.log(undefined > 0); // => false
+console.log(undefined < 0); // => false
+
+
+
+//* Strict check (check datatype)
+console.log("2" == 2);  // => true
+console.log("2" === 2); // => false
 
