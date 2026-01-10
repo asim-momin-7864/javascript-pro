@@ -89,3 +89,17 @@ function returnArrayValue(getArray) {
 };
 
 console.log(returnArrayValue(myArray1)); // => 400
+
+
+// Default value for paramteres
+function shopping(noItems = 1 , price = 200) {
+  return price * noItems;
+};
+
+// when we pass all arguments
+console.log(shopping(5, 1200)); // => 6000
+
+// when we not pass all arguments
+console.log(shopping()); // => 200
+ 
+
